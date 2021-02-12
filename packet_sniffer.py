@@ -14,7 +14,6 @@ def capturePackets(networkInterface):
                 if('Python-urllib/3.8' in filteredPacket['http']._all_fields['http.user_agent']):
                     pass
                 else:
-                    print(filteredPacket['http']._all_fields['http.user_agent'])
                     saveImage(url)
             else:
                 pass
