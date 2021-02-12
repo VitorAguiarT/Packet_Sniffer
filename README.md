@@ -17,5 +17,5 @@ $ sudo apt-get update -y && sudo apt-get install -y tshark
 $ sudo pip3 install wget
 
 $ python3 -m pip install pyshark
-  ou
+  *OU*
 $ git clone https://github.com/KimiNewt/pyshark.git && cd pyshark/src && sudo python3 setup.py install
