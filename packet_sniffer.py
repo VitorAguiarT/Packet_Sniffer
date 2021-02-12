@@ -10,7 +10,7 @@ def capturePackets(networkInterface):
         filteredPacket = filterHTTP(preFilterPacket)
         try:
             url = filteredPacket['http']._all_fields['http.request.full_uri']
-            if '.jpg' or '.jpeg' or '.png' in url:
+            if url.endswith('.jpg') or url.endswith('.jpeg') or url.endswith('.png'):
                 if('Python-urllib/3.8' in filteredPacket['http']._all_fields['http.user_agent']):
                     pass
                 else:
@@ -24,7 +24,7 @@ def filterHTTP(packet):
     """
     Filtra pacotes HTTPs.
     """
-    if hasattr(packet, 'http'):    
+    if 'http' in packet:
         return packet
 
 def saveImage(url):
