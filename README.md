@@ -8,7 +8,7 @@
 - Capturar pacotes, filtrar os pacotes HTTPs e armazenar em um diretório local todas as imagens contidas nos pacotes filtrados.
 
 
-**Instalando o PyShark e Wget**
+**Instalando o PyShark e Wget (Ubuntu)**
 
 $ sudo apt-get install python3-pip
 
@@ -19,3 +19,7 @@ $ sudo pip3 install wget
 $ python3 -m pip install pyshark
   *OU*
 $ git clone https://github.com/KimiNewt/pyshark.git && cd pyshark/src && sudo python3 setup.py install
+
+**Exacutando o Script**
+
+$ sudo python3 packet_sniffer.py
